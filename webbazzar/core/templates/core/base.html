@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title%}{%endblock%} | Web Bazzar</title>
+</head>
+<body class="px-24">
+    <nav class="h-[100px] flex justify-between items-center border-b-2 border-gray-400">
+        <a class="font-semibold text-2xl" href="/">Web Bazzar</a>
+        <div class="space-x-6">
+            <a class="font-semibold text-lg hover:text-gray-400" href="#">New Item</a>
+            <a class="font-semibold text-lg hover:text-gray-400" href="#">Browse</a>
+
+            <a class="font-semibold px-4 py-2 text-lg text-white bg-teal-500 hover:bg-white hover:text-teal-500 border-2 border-teal-500 rounded-lg" href="#">Sign Up</a>
+            <a class="font-semibold px-4 py-2 text-lg text-white bg-gray-500  hover:bg-white hover:text-gray-500 border-2 border-gray-500 rounded-lg" href="#">Login</a>
+        </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

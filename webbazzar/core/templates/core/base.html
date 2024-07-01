@@ -6,8 +6,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>{% block title%}{%endblock%} | Web Bazzar</title>
 </head>
-<body class="px-24">
-    <nav class="h-[100px] flex justify-between items-center border-b-2 border-gray-400">
+<body class="">
+    <nav class="h-[100px] px-24 flex justify-between items-center border-b-2 border-gray-400">
         <a class="font-semibold text-2xl" href="/">Web Bazzar</a>
         <div class="space-x-6">
             <a class="font-semibold text-lg hover:text-gray-400" href="#">New Item</a>
@@ -20,5 +20,17 @@
     {% block content %}
 
     {% endblock %}
+
+    <footer class="bg-gray-800 p-6 flex justify-between">
+        <div class="w-2/3 text-gray-400 font-semibold">About<br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Ratione nulla exercitationem facere commodi animi error soluta nam laborum!
+        </div>
+        <div class="w-1/3 flex flex-col justify-center items-starts text-teal-400 font-semibold gap-4">
+            <a class="hover:text-teal-700" href="{% url 'index' %}">Home</a>
+            <a class="hover:text-teal-700" href="{% url 'contact'%}">Contacts</a>
+            <a class="hover:text-teal-700" href="#">Privacy Policy</a>
+            <a class="hover:text-teal-700" href="#">Terms and Conditions</a>
+        </div>
+    </footer>
 </body>
 </html>

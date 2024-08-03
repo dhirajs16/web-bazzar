@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %} {% endblock %} | eMart</title>
+</head>
+
+<body>
+    <nav class="p-6 flex justify-between items-center border-b border-gray-200">
+        <a class="text-xl font-semibold" href="/">eMart</a>
+        <div class="space-x-6">
+            <a class="text-lg font-semibold transition hover:ease-out hover:text-gray-500" href="">New Items</a>
+            <a class="text-lg font-semibold transition hover:ease-out hover:text-gray-500" href="">Browse</a>
+
+            <a class="text-lg text-white font-semibold bg-teal-500 px-6 py-2 rounded-xl transition hover:ease-out hover:bg-gray-500" href="">Sign up</a>
+            <a class="text-lg text-white font-semibold bg-teal-500 px-6 py-2 rounded-xl transition hover:ease-out hover:bg-gray-500" href="">Login</a>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer class="p-6 bg-gray-800 flex justify-between">
+        <div class="pr-10 w-2/3 text-gray-300 flex flex-col">
+            <h3 class="font-semibold text-lg">About</h3>
+            <p class="text-md">At eMart, we’re committed to bringing you quality products right to your doorstep. Explore our wide range of groceries, electronics, fashion, and more. Your satisfaction is our priority!
+            </p>
+        </div>
+
+        <div class="w-1/3 pl-10">
+            <h3 class="font-semibold text-lg text-gray-300">Menu</h3>
+            <ul class="space-y-2 pt-3 text-md">
+                <li><a class="text-teal-500 transition hover:ease-out hover:text-gray-300" href="">About</a></li>
+                <li><a class="text-teal-500 transition hover:ease-out hover:text-gray-300" href="{% url 'contacts' %}">Contacts</a></li>
+                <li><a class="text-teal-500 transition hover:ease-out hover:text-gray-300" href="">Privacy Policies</a></li>
+                <li><a class="text-teal-500 transition hover:ease-out hover:text-gray-300" href="">Terms of use</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
